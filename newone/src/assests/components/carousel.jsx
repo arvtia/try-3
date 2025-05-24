@@ -12,20 +12,20 @@ import { Pagination, Navigation } from 'swiper/modules'
 const slidesData = [
   {
     img: "https://img.freepik.com/free-photo/amazing-ducks-around-lake_181624-12983.jpg?semt=ais_hybrid&w=740",
-    title: "Discover Nature",
-    description: "Explore beautiful landscapes.",
+    title: "Graceful Wanderers",
+    description: "Wild ducks glide across serene waters, embracing nature’s rhythm. Their effortless movement mirrors the tranquility of the world around them.",
     buttonText: "Learn More"
   },
   {
     img: "https://media.istockphoto.com/id/1280715716/photo/germany-stuttgart-magical-orange-sunset-sky-above-ripe-grain-field-nature-landscape-in-summer.jpg?s=612x612&w=0&k=20&c=TukToGq-LkmpxvEXEomC3d11prf_hDRSwA7pYsLYG50=",
-    title: "Urban Vibes",
-    description: "Experience city life in motion.",
+    title: "The Dance of Flight",
+    description: "Majestic flocks take to the skies, painting sunsets with movement. Their synchronized flight speaks of unity and instinct passed down through generations.",
     buttonText: "Explore"
   },
   {
     img: "https://as2.ftcdn.net/v2/jpg/12/13/98/67/1000_F_1213986793_s2yWHGUEsbYAfyiAv0Q06ToVtBUEiJKE.jpg",
-    title: "Adventure Awaits",
-    description: "Find exciting destinations.",
+    title: "Nature’s Companions",
+    description: "From tiny ducklings to wise elders, these birds embody resilience. Their playful splashes and gentle calls create melodies that echo through peaceful waters.",
     buttonText: "Get Started"
   }
 ]
@@ -43,7 +43,7 @@ export default function Carousel() {
     >
       {slidesData.map((slide, index) => (
         <SwiperSlide key={index}>
-          <div className="hero is-small is-bold">
+          <div className="hero is-medium is-bold cleanMatt">
             <div className="hero-body">
               <div className="columns is-vcentered">
                 
@@ -55,8 +55,8 @@ export default function Carousel() {
                 </div>
 
                 {/* Text & Button Section */}
-                <div className="column is-half box">
-                  <h1 className="title is-size-4 has-text-dark">{slide.title}</h1>
+                <div className="column is-half box glassmorphism ">
+                  <h1 className="title is-size-4 has-text-dark my-2">{slide.title}</h1>
                   <p className="subtitle has-text-dark is-size-6">{slide.description}</p>
                   <button className="button glassmorphism is-outlined has-text-dark">{slide.buttonText}</button>
                 </div>
