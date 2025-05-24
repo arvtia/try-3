@@ -18,7 +18,7 @@ const Navbar = () => {
   }, [])
 
   return (
-    <nav className="navbar" role="navigation" aria-label="main navigation">
+    <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <a className="navbar-item" href="#">
           <p className="is-size-4 has-text-weight-bold has-icon-right">
