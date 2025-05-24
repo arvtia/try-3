@@ -2,7 +2,7 @@ import Navbar  from "./assests/components/navbar";
 import Hero1 from "./assests/components/heros1";
 
 import Hero2 from "./assests/components/hero2";
-import InputFocus from "./assests/components/useRef";
+import Carousal from "./assests/components/carousel";
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
         <Navbar/>
         <Hero1/>
         <Hero2/>
+        <Carousal/>
     </>
   );
 }
