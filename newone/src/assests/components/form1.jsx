@@ -1,20 +1,21 @@
 const Form1 = () =>{
     return (
-        <div className="columns">
-            <article className="mt-3 mx-auto message">
-                <div className="message-header">
-                    <p>Please fill the below form to become a volunteer of Duck</p>
-                    <button className="delete" aria-label="delete"></button>
-                </div>
-                <div className="message-body">
-                    Lorem ipsum dolor sit amet.
-                    Totam nemo corporis dolores rerum.
-                    Quaerat quidem non vel magni?
-                </div>
+        <div className="column is-third-quarter ">
+            <div className="column is-half">
+                <article className="mt-3 mx-auto message">
+                    <div className="message-header">
+                        <p>Please fill the below form to become a volunteer of Duck</p>
+                        <button className="delete" aria-label="delete"></button>
+                    </div>
+                    <div className="message-body">
+                        Lorem ipsum dolor sit amet.
+                        Totam nemo corporis dolores rerum.
+                        Quaerat quidem non vel magni?
+                    </div>
+                </article>
+            </div>
 
-            </article>
-
-            <div className="column is-half mx-auto">
+            <div className="column">
                 <div className="field is-horizontal">
                     
                     <div className="field-body">
