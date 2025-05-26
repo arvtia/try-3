@@ -17,10 +17,10 @@ const Footer = () => {
                     </div>
 
                     {/* Navigation Links - Responsive Fix */}
-                    <div className="column is-12-mobile is-4-tablet">
+                    <div className="column is-12-mobile is-4-tablet my-6">
                         <ul className="is-flex is-justify-content-center 
-                                       is-column-to-row">
-                            {["About", "Leadership", "Press/News", "Careers/Team", "Contact Us"].map((item) => (
+                                       ">
+                            {["About", "Career", "News", "Contact Us"].map((item) => (
                                 <li key={item} className="p-3">
                                     <a className="has-text-white has-text-weight-medium" href={`/${item.toLowerCase().replace(/\s/g, "-")}`}>
                                         {item}
@@ -56,9 +56,23 @@ const Footer = () => {
                             ))}
                         </div>
                     </div>
-
                 </div>
             </div>
+                <div className="columns my-4 is-justify-content-center is-flex ">
+                    <div className="column is-one-third is-justify-content-center is-align-items-center">
+                         <div className="py-3 ml-5 is-clipped  ">
+                            <div className="field is-grouped has-addons">
+                                <div className="control">
+                                    <input type="text" className="input" placeholder="enter your email"/>
+                                </div>
+                                <div className="control">
+                                    <button className="button ">subscribe</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
         </section>
     );
 };
