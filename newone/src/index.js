@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import 'bulma/css/bulma.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './style.css';
-import { Link } from "react-dom";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
