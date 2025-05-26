@@ -5,6 +5,7 @@ import Hero2 from "./assests/components/hero2";
 import Carousal from "./assests/components/carousel";
 import Aboutus from "./assests/components/about";
 import Footer from "./assests/components/footer";
+import Form1 from "./assests/components/form1";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Hero2/>
         <Carousal/>
         <Aboutus/>
+        <Form1/>
         <Footer/>
     </>
   );

@@ -13,7 +13,7 @@ const Aboutus = () => {
                         <div className="column is-flex-fullhd is-flex-desktop is-justified-center is-align-items-start">
                             <div className="is-bold mb-2 column is-flex-mobile is-flex-tablet">
                                 <figure>
-                                    <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-226741,resizemode-75,msid-64333030/magazines/panache/indra-nooyi-highest-paid-female-ceo-fewer-women-bosses-worldwide-but-their-pay-higher-than-men.jpg" alt="ceo image" className=" is-rounded" />
+                                    {/* <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-226741,resizemode-75,msid-64333030/magazines/panache/indra-nooyi-highest-paid-female-ceo-fewer-women-bosses-worldwide-but-their-pay-higher-than-men.jpg" alt="ceo image" className=" is-rounded" /> */}
                                 </figure>
                             </div>
                             <div className="column is-fullwidth-mobile ">
