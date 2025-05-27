@@ -1,6 +1,4 @@
-
-
-const Aboutus = () => {
+ const Aboutus = () => {
     return (
         <>
            <section className="hero is-small my-2 is-bold">
@@ -50,6 +48,23 @@ const Aboutus = () => {
             </section>             
        </>
     )
+};
+const AboutHome = () =>{
+    return (
+        <section className="section cleanMatt2 my-3">
+            <div className="hero is-medium  ">
+                <div className="hero-body">
+                    <div className="columns vcentered">
+                        <div className="column is-half card is-centered glassmorphism ">
+                            <p className="is-size-1">Ducks</p>
+                            <p className="is-size-4">Making world of ducks more easier <span className="font-monospace has-text-color-white">!!!!</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
 }
+ export {AboutHome, Aboutus};
 
-export default Aboutus
+  
