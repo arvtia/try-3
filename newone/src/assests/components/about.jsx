@@ -1,3 +1,5 @@
+import { useState } from "react"; 
+ 
  const Aboutus = () => {
     return (
         <>
@@ -55,9 +57,12 @@ const AboutHome = () =>{
             <div className="hero is-medium  ">
                 <div className="hero-body">
                     <div className="columns vcentered">
-                        <div className="column is-half card is-centered glassmorphism ">
+                        <div className="column is-half has-text-centered glassmorphism ">
                             <p className="is-size-1">Ducks</p>
                             <p className="is-size-4">Making world of ducks more easier <span className="font-monospace has-text-color-white">!!!!</span></p>
+                        </div>
+                        <div className="column">
+                                <img src="https://img.freepik.com/free-photo/smiling-boy-looking-duckling-front-hay_23-2147924137.jpg?semt=ais_hybrid&w=740" alt="" />
                         </div>
                     </div>
                 </div>
@@ -65,6 +70,72 @@ const AboutHome = () =>{
         </section>
     )
 }
- export {AboutHome, Aboutus};
+
+const faqs = [
+  { question: "Do you provide any free plan?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+  { question: "How to claim your 25% discount offer?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+  { question: "What’s your refund policy?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+  { question: "How to get support for the product?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+];
+
+const FAQ = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  return (
+    <section className="has-background-light  is-relative is-clipped">
+      <img
+        className="is-absolute is-bottom-0"
+        style={{ left: "50%", transform: "translateX(-50%)" }}
+        src="flaro-assets/images/faqs/gradient.svg"
+        alt=""
+      />
+      <div className="container px-8 py-6">
+        <h2 className="is-size-4 has-text-centered py-4 has-text-weight-bold">Have any question</h2>
+        <div className="mb-11">
+          {faqs.map((faq, index) => (
+            <div key={index} className="p-1">
+              <div className="is-clickable" onClick={() => toggleFAQ(index)}>
+                <div className="py-7 px-8 has-background-white box">
+                  <div className="is-flex is-flex-wrap-wrap is-justify-content-space-between">
+                    <div className="p-2" style={{ flex: 1 }}>
+                      <h3 className="has-text-weight-semibold has-text-dark is-size-4">{faq.question}</h3>
+                      <div
+                        style={{ maxHeight: activeIndex === index ? "200px" : "0px", overflow: "hidden", transition: "max-height 0.3s ease-in-out" }}
+                        className="is-clipped"
+                      >
+                        <p className="mt-4 has-text-grey has-text-weight-medium">{faq.answer}</p>
+                      </div>
+                    </div>
+                    <div className="p-2">
+                      <svg
+                        className={`relative top-1 ${activeIndex === index ? "is-rotate-180" : "is-rotate-0"}`}
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M14.25 6.75L9 12L3.75 6.75" stroke="#18181B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+
+
+ export {AboutHome, Aboutus , FAQ};
 
   
