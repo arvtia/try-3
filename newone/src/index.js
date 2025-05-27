@@ -5,6 +5,10 @@ import reportWebVitals from './reportWebVitals';
 import 'bulma/css/bulma.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './style.css';
+import { BrowserRouter } from "react-router-dom";
+import { Router } from "react-router-dom";
+import { Route } from "react-router-dom";
+import { Routes } from "react-router-dom";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

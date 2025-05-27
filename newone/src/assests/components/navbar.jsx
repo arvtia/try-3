@@ -1,4 +1,6 @@
 import { useRef, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const dropdownRef = useRef(null)
   const burgerRef = useRef(null)
@@ -22,7 +24,7 @@ const Navbar = () => {
       <div className="navbar-brand">
         <a className="navbar-item" href="#">
           <p className="is-size-4 has-text-weight-bold has-icon-right">
-            Ducks
+            <Link to ="/">Home</Link>
             <span>
               <i className="bi bi-feather2" />
             </span>
@@ -50,8 +52,10 @@ const Navbar = () => {
         id="navbarBasicExample"
       >
         <div className="navbar-start">
-          <a className="navbar-item" href="#">Home</a>
-          <a className="navbar-item" href="#">Documentation</a>
+          <a className="navbar-item"><Link to={"/"}>Home</Link></a>
+          <a className="navbar-item"><Link to={"/About"}>About</Link></a>
+          <a className="navbar-item"><Link to={"/Contact"}>Contact</Link></a>
+          <a className="navbar-item"><Link to={"/blog"}>Documentation</Link> </a>
 
           <div ref={dropdownRef} className="navbar-item has-dropdown is-hoverable">
             <button className="navbar-link" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>

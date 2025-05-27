@@ -1,25 +1,25 @@
-import Navbar  from "./assests/components/navbar";
-import Hero1 from "./assests/components/heros1";
-import Hero2 from "./assests/components/hero2";
-import Carousal from "./assests/components/carousel";
-import  {Aboutus, AboutHome, FAQ, FAQside} from "./assests/components/about";
-import Footer from "./assests/components/footer";
-import Form1 from "./assests/components/form1";
-
-
+import  Home  from "../src/pages/home";
+import Contact from "../src/pages/contact"
+import Layout from "./pages/layout";
+import Blog from "./pages/blogs";
+import NoPage from "./assests/noPage";
+import About from "./pages/about";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <>
-        <Navbar/>
-        <Hero1/>
-        <Carousal/>
-        <Hero2/>
-        <Aboutus/>
-        <AboutHome/>
-        <FAQside/>
-        <Form1/>
-        <Footer/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} />
+          <Route path="about" element={<About />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
     </>
   );
 }
