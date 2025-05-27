@@ -72,10 +72,46 @@ const AboutHome = () =>{
 }
 
 const faqs = [
-  { question: "Do you provide any free plan?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-  { question: "How to claim your 25% discount offer?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-  { question: "What’s your refund policy?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-  { question: "How to get support for the product?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+  { 
+    question: "What is Ducks, and what do you do?", 
+    answer: "Ducks is a non-profit organization based in Birmingham, UK, dedicated to the protection and well-being of ducks. We advocate for habitat preservation, rescue efforts, and responsible care of ducks in urban and natural environments."
+  },
+  { 
+    question: "How can I help support Ducks?", 
+    answer: "You can support us by volunteering, donating, or spreading awareness. We also appreciate contributions of food, supplies, and funds to help our rescue and conservation initiatives."
+  },
+  { 
+    question: "Do you rehabilitate injured ducks?", 
+    answer: "Yes! Our team works with wildlife experts to rescue, rehabilitate, and release injured or distressed ducks back into their natural habitat whenever possible."
+  },
+  { 
+    question: "Where do the rescued ducks go?", 
+    answer: "Depending on the condition of the ducks, they are either released into safe environments or placed in sanctuaries where they receive ongoing care."
+  },
+  { 
+    question: "Can I adopt a duck?", 
+    answer: "We offer symbolic duck adoptions! By adopting a duck, you help fund its care and conservation. While we don’t offer real adoptions, you’ll receive updates on a specific rescued duck you’re supporting."
+  },
+  { 
+    question: "What kind of food should I feed ducks?", 
+    answer: "Avoid bread—it’s unhealthy for ducks! Instead, feed them oats, lettuce, seeds, or specialized duck food to ensure they get proper nutrition."
+  },
+//   { 
+//     question: "Are ducks endangered in the UK?", 
+//     answer: "While ducks aren’t generally endangered, some species face habitat loss and pollution threats. Our organization focuses on protecting vulnerable populations and maintaining safe environments for them."
+//   },
+//   { 
+//     question: "How can I report a duck in distress?", 
+//     answer: "If you see an injured or trapped duck, contact us immediately, and we’ll coordinate a rescue operation with local wildlife experts."
+//   },
+//   { 
+//     question: "Can businesses partner with Ducks?", 
+//     answer: "Absolutely! We welcome collaborations with companies that align with our mission. Whether through sponsorships or eco-friendly initiatives, businesses can make a meaningful impact."
+//   },
+//   { 
+//     question: "How do I stay updated on Ducks' activities?", 
+//     answer: "Follow us on social media or subscribe to our newsletter for updates on rescues, conservation efforts, and upcoming events."
+//   }
 ];
 
 const FAQ = () => {
@@ -86,23 +122,22 @@ const FAQ = () => {
   };
 
   return (
-    <section className="has-background-light  is-relative is-clipped">
+    <section className="is-relative is-clipped">
       <img
         className="is-absolute is-bottom-0"
         style={{ left: "50%", transform: "translateX(-50%)" }}
         src="flaro-assets/images/faqs/gradient.svg"
         alt=""
       />
-      <div className="container px-8 py-6">
-        <h2 className="is-size-4 has-text-centered py-4 has-text-weight-bold">Have any question</h2>
-        <div className="mb-11">
+      <div className="container ">
+        <div className="mb-1">
           {faqs.map((faq, index) => (
             <div key={index} className="p-1">
               <div className="is-clickable" onClick={() => toggleFAQ(index)}>
-                <div className="py-7 px-8 has-background-white box">
+                <div className="py-4 px-8 has-background-white box">
                   <div className="is-flex is-flex-wrap-wrap is-justify-content-space-between">
-                    <div className="p-2" style={{ flex: 1 }}>
-                      <h3 className="has-text-weight-semibold has-text-dark is-size-4">{faq.question}</h3>
+                    <div className="p-1" style={{ flex: 1 }}>
+                      <h3 className="has-text-weight-semibold has-text-dark is-size-5">{faq.question}</h3>
                       <div
                         style={{ maxHeight: activeIndex === index ? "200px" : "0px", overflow: "hidden", transition: "max-height 0.3s ease-in-out" }}
                         className="is-clipped"
@@ -135,7 +170,28 @@ const FAQ = () => {
 };
 
 
+const FAQside = () => {
+    return (
+        <section className="section is-medium">
+            <div className="section-body">
+                <div className="columns">
+                    <div className="column is-one-third ">
+                        <figure className="figure">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmn78XpYpl5VE-sLDrHoMKOoasgSn1rP56xQ&s" alt="child holidng a duck" style={{width:"100%"}} className=" is-1by1" />
+                        </figure>
+                    </div>
+                    <div className="column py-4">
+                        <>
+                        <FAQ/>
+                        </>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
 
- export {AboutHome, Aboutus , FAQ};
+
+ export {AboutHome, Aboutus , FAQ, FAQside};
 
   
