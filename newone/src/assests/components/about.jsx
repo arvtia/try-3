@@ -123,14 +123,8 @@ const FAQ = () => {
 
   return (
     <section className="is-relative is-clipped">
-      <img
-        className="is-absolute is-bottom-0"
-        style={{ left: "50%", transform: "translateX(-50%)" }}
-        src="flaro-assets/images/faqs/gradient.svg"
-        alt=""
-      />
       <div className="container ">
-        <div className="mb-1">
+        <div className="mb-6">
           {faqs.map((faq, index) => (
             <div key={index} className="p-1">
               <div className="is-clickable" onClick={() => toggleFAQ(index)}>
@@ -172,8 +166,9 @@ const FAQ = () => {
 
 const FAQside = () => {
     return (
-        <section className="section is-medium">
+        <section className="section is-small">
             <div className="section-body">
+                <div className="title has-text-centered has-text-weight-bold">Frequently Asked Question</div>
                 <div className="columns">
                     <div className="column is-one-third ">
                         <figure className="figure">
