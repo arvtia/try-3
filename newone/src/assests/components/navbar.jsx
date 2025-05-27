@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="navbar-brand">
         <a className="navbar-item" href="#">
           <p className="is-size-4 has-text-weight-bold has-icon-right">
-            <Link to ="/">Home</Link>
+            <Link to ="/" className="has-text-black">Home</Link>
             <span>
               <i className="bi bi-feather2" />
             </span>
@@ -52,41 +52,41 @@ const Navbar = () => {
         id="navbarBasicExample"
       >
         <div className="navbar-start">
-          <a className="navbar-item"><Link to={"/"}>Home</Link></a>
-          <a className="navbar-item"><Link to={"/About"}>About</Link></a>
-          <a className="navbar-item"><Link to={"/Contact"}>Contact</Link></a>
-          <a className="navbar-item"><Link to={"/blog"}>Documentation</Link> </a>
+          <a className="navbar-item"><Link to={"/"} className="has-text-black">Home</Link></a>
+          <a className="navbar-item"><Link to={"/About"} className="has-text-black">About</Link></a>
+          <a className="navbar-item"><Link to={"/Contact" }className="has-text-black">Contact</Link></a>
+          <a className="navbar-item"><Link to={"/blog"} className="has-text-black">Documentation</Link> </a>
 
-          <div ref={dropdownRef} className="navbar-item has-dropdown is-hoverable">
+        <div ref={dropdownRef} className="navbar-item has-dropdown is-hoverable">
             <button className="navbar-link" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
-              More
+                More
             </button>
-            <div className={`navbar-dropdown ${isDropdownOpen ? "" : "is-hidden"}`} id="dropdownwalatab">
-              <a className="navbar-item" href="#">About</a>
-              <a className="navbar-item" href="#">Jobs</a>
-              <a className="navbar-item" href="#">Contact</a>
-              <a className="navbar-item" href="#">Report an issue</a>
+                <div className={`navbar-dropdown ${isDropdownOpen ? "" : "is-hidden"}`} id="dropdownwalatab">
+                    <a className="navbar-item" href="#">About</a>
+                    <a className="navbar-item" href="#">Jobs</a>
+                    <a className="navbar-item" href="#">Contact</a>
+                    <a className="navbar-item" href="#">Report an issue</a>
+                </div>
             </div>
-          </div>
         </div>
 
         <div className="navbar-end">
-          <div className="navbar-item">
-            <div className="field has-addons is-flex is-align-items-center">
-              <div className="control is-expanded">
-                <input className="input" type="text" placeholder="Search" />
-              </div>
-              <div className="control">
-                <button className="button has-icon-left has-icon is-text button-navbar">
-                  <span>
-                    <i className="bi bi-search" />
-                  </span>
-                </button>
-              </div>
+            <div className="navbar-item">
+                <div className="field has-addons is-flex is-align-items-center">
+                <div className="control is-expanded">
+                    <input className="input" type="text" placeholder="Search" />
+                </div>
+                <div className="control">
+                    <button className="button has-icon-left has-icon is-text button-navbar">
+                    <span>
+                        <i className="bi bi-search" />
+                    </span>
+                    </button>
+                </div>
+                </div>
             </div>
-          </div>
+            </div>
         </div>
-      </div>
     </nav>
   )
 }
